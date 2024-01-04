@@ -9,7 +9,7 @@ module.exports = {
           name: 'test-electron'
         },
         prerelease: false,
-        draft: true
+        draft: false
       }
     }
   ],
