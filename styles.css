@@ -1,0 +1,260 @@
+body {
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+}
+
+#logoBlock {
+  background-image: url(./images/mainPage.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+  height: 165px;
+}
+
+.left {
+  width: 210px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #f8f9fa;
+}
+
+.leftMenu {
+  padding: 1rem;
+}
+
+.right {
+  margin-left: 210px;
+}
+
+.logBlock {
+  padding: 5px;
+}
+
+.flexContainer {
+  text-align: center;
+  border-bottom: 1px solid #e2e6ea;
+}
+
+.buttonContainer {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+#myProgress {
+  /* width: 100%; */
+  background-color: #ddd;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#myBar {
+  width: 0%;
+  height: 15px;
+  background-color: #4caf50;
+}
+
+button {
+  display: block;
+  font-weight: 400;
+  cursor: pointer;
+
+  color: #212529;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+
+  text-align: center;
+  /* vertical-align: middle; */
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  margin: 0.1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+button:focus {
+  color: #212529;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+button:hover {
+  color: #212529;
+  border-color: #dae0e5;
+  background-color: #e2e6ea;
+}
+
+.greenButton {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.redButton {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.darkButton {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.orangeButton {
+  color: #fff;
+  background-color: #f5ac3a;
+  border-color: #f5ac3a;
+}
+
+.online {
+  color: green;
+}
+
+.offline {
+  color: orangered;
+}
+
+.mainHeading {
+  margin-left: 10px;
+  margin-bottom: 0px;
+  color: #999;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  width: 470px;
+  z-index: 999;
+
+  background: #f8f9fa;
+  border: 1px solid #e2e6ea;
+  right: 5%;
+  top: 5%;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  color: black;
+}
+
+.hasTooltip:hover .tooltip,
+.tooltip:hover {
+  display: block;
+}
+
+.newbtn {
+  font-size: 90%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+
+  display: block;
+  font-weight: 400;
+
+  text-align: center;
+  width: 120px;
+
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+#infoBlock {
+  background-image: url(./images/info.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  margin-right: 20px;
+  height: 18px;
+  width: 18px;
+  float: right;
+  margin-top: 5px;
+}
+
+.topH {
+  font-size: 14px;
+  margin: 10px;
+  background-color: #f8f9fa;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
+  border: 1px solid #9999992e;
+  color: #000000ad;
+}
+
+#infoBlock:hover {
+  background-image: url(./images/info-hover.svg);
+  cursor: pointer;
+}
+
+hr {
+  border-top: 1px solid #e2e6ea;
+}
+
+.wrapper {
+  margin: 10px;
+  cursor: default;
+}
+.detail {
+  display: block;
+}
+
+.tooltipButton {
+  position: relative;
+}
+
+.tooltipButton:before,
+.tooltipButton:after {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.tooltipButton:before {
+  background: black;
+  border-radius: 2px;
+  color: #fff;
+  content: attr(data-title);
+  font-size: 14px;
+  padding: 6px 5px;
+  top: 50px;
+  left: -80%;
+  min-width: 250px;
+}
+
+/* the animations */
+/* fade */
+.tooltipButton.fade:after,
+.tooltipButton.fade:before {
+  transform: translate3d(0, -10px, 0);
+  transition: all 0.15s ease-in-out;
+}
+.tooltipButton.fade:hover:after,
+.tooltipButton.fade:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
