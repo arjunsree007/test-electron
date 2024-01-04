@@ -1,7 +1,18 @@
 const { app, BrowserWindow, ipcMain, Menu, dialog } = require("electron");
+const { updateElectronApp } = require('update-electron-app')
+
 const activeWindow = require("active-win");
+
+
 const path = require("path");
 const Store = require("./utils/store.js");
+
+updateElectronApp()
+
+// run this as early in the main process as possible
+if (require('electron-squirrel-startup')) app.quit();
+
+
 let mainWindow = null;
 
 // First instantiate the class
